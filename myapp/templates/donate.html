@@ -1,0 +1,172 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'donate.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="donate-page">
+  <!-- Hero Section -->
+  <header class="donate-header">
+    <p>Your contributions help us serve delicious meals to more communities. Every little bit counts!</p>
+  </header>
+
+  <!-- Donation Form -->
+  <section class="donation-form">
+    <h2>Make a Donation</h2>
+    <form action="{% url 'donate' %}" method="post">
+      {% csrf_token %}
+      <!-- Name and Email -->
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+      <label for="mob-no">Mobile no:</label>
+      <input type="text" id="mob-no" name="mob-no" placeholder="Your mobile number" required>
+
+      <!-- Donation Amount -->
+      <br>
+      <label for="donation-amount">Select Donation Amount:</label>
+      <div class="donation-options">
+        <input type="radio" id="amount-10" name="donation-amount" value="1000">
+        <label for="amount-10">₹1000</label>
+
+        <input type="radio" id="amount-20" name="donation-amount" value="2000">
+        <label for="amount-20">₹2000</label>
+
+        <input type="radio" id="amount-50" name="donation-amount" value="5000">
+        <label for="amount-50">₹5000</label>
+
+        <input type="radio" id="amount-custom" name="donation-amount" value="custom">
+        <label for="amount-custom">Custom Amount:</label>
+        <input type="number" id="custom-amount" name="custom-amount" placeholder="Enter amount">
+      </div>
+
+      <!-- Additional Options -->
+      <label for="additional-options">Additional Options:</label>
+      <div class="checkbox-group">
+        <input type="checkbox" id="subscribe" name="subscribe">
+        <label for="subscribe">Subscribe to our newsletter</label>
+
+        <input type="checkbox" id="volunteer" name="volunteer">
+        <label for="volunteer">I’d like to volunteer</label>
+      </div>
+
+      <!-- Donation Date -->
+      <label for="donation-date">Choose a Donation Date:</label>
+      <input type="date" id="donation-date" name="donation-date" required onchange="validateDate()">
+      <button onclick="setToday()">today</button>
+
+
+      <!-- Buttons -->
+      <div class="form-buttons">
+        <button type="submit" onclick="validateForm()">Donate Now</button>
+        <button type="reset" onclick="showAlert()">Reset Form</button>
+      </div>
+    </form>
+  </section>
+
+  <!-- Marquee Section -->
+  <section class="donors-marquee">
+    <h2>Recent Donors</h2>
+    <marquee behavior="scroll" direction="left">Thank you, John! - ₹500 | Thank you, Sarah! - $20 | Thank you, Mike! - $100</marquee>
+  </section>
+
+  <!-- Table for Donation Impact -->
+  <section class="donation-impact-table">
+    <h2>Your Donation Impact</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Donation Amount</th>
+          <th>Meals Provided</th>
+          <th>Communities Served</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>₹1000</td>
+          <td>5 Meals</td>
+          <td>1 Community</td>
+        </tr>
+        <tr>
+          <td>₹2000</td>
+          <td>10 Meals</td>
+          <td>2 Communities</td>
+        </tr>
+        <tr>
+          <td>₹5000</td>
+          <td>25 Meals</td>
+          <td>5 Communities</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</section>
+
+<script>
+
+  // 1. Alert , Confirm , Submit Prompt box in any module ( Ex: a welcome message using alert )
+
+  function showAlert(){
+    confirm("Are you sure you wanna reset?")
+    alert("okay,the form has been reset")
+  }
+
+  // 2. Develop a JavaScript page to demonstrate an If condition and perform any of the popup boxes
+
+  function validateDate(){
+    let donationDate = document.getElementById('donation-date').value;
+    let minimumDate = new Date().toISOString().split("T")[0];
+
+    if(donationDate < minimumDate){
+      alert("Sorry, we can't donate on that day. Can you choose some other day ?")
+      document.getElementById('donation-date').value = "";
+    }
+
+  }
+
+  // 3.  Use Date Object (any one method) in any module
+
+  function setToday(){
+    let currentDate = new Date().toISOString().split("T")[0];
+    document.getElementById('donation-date').value = currentDate;
+  }
+
+  // 4.  JavaScript for password verification, phone number validation and email address validation
+
+  function validateForm(){
+    let name = document.getElementById('name').value;
+    let email = document.getElementById('email').value;
+    let mobileNo = document.getElementById('mob-no').value;
+    
+    if (name.length < 3) {
+      alert("Username must be at least 3 characters long");
+      event.preventDefault();
+  }
+
+  // Email validation (basic regex check)
+  let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  if (!emailPattern.test(email)) {
+      alert("Please enter a valid email address");
+      event.preventDefault();
+  }
+
+  // Mobile number validation (10-digit number starting with 6-9)
+  let mobilePattern = /^[6-9]\d{9}$/;
+  if (!mobilePattern.test(mobileNo)) {
+      alert("Please enter a valid 10-digit mobile number starting with 6-9");
+      event.preventDefault();
+  }
+
+}
+
+
+
+
+
+</script>  
+
+{% endblock %}

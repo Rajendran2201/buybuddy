@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<section class="moments-page">
+  <!-- Moments Header -->
+  <header class="moments-header">
+    <h1>Our Favorite Moments</h1>
+    <p>Relive the best moments with BuyBuddy through photos and memories shared by our amazing community!</p>
+  </header>
+
+  <!-- Moments Gallery -->
+  <section class="moments-gallery">
+    <h2>Photo Highlights</h2>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="{% static '/assets/image-01.jpg' %}" alt="Food Truck Event">
+        <p>Food Truck Event at Central Park</p>
+      </div>
+      <div class="gallery-item">
+        <img src="{% static 'assets/image-02.jpg' %}" alt="Summer Feast">
+        <p>Summer Feast - Miami Beach</p>
+      </div>
+      <div class="gallery-item">
+        <img src="{% static 'assets/image-03.jpg' %}" alt="Happy Customers">
+        <p>Happy Customers Enjoying Our Burgers!</p>
+      </div>
+      <div class="gallery-item">
+        <img src="{% static 'assets/image-04.jpg' %}" alt="Spreading Love">
+        <p>Food is what unites us!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- User Submissions Section -->
+  <section class="user-submissions">
+    <h2>Share Your Moments</h2>
+    <p>Have a great moment with BuyBuddy? Share it with us and get featured!</p>
+    <form action="#" method="post">
+      <label for="user-name">Your Name:</label>
+      <input type="text" id="user-name" name="user-name" placeholder="Your Name" required>
+
+      <label for="user-photo">Upload Photo:</label>
+      <input type="file" id="user-photo" name="user-photo" accept="image/*" required>
+
+      <label for="moment-description">Describe Your Moment:</label>
+      <textarea id="moment-description" name="moment-description" rows="4" placeholder="Tell us about your moment" required></textarea>
+
+      <button type="submit">Share Moment</button>
+    </form>
+  </section>
+</section>
+{% endblock %}

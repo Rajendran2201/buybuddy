@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'blog.css' %}">
+{% endblock %}
+{% block content %}
+<section class="blog-page">
+  <!-- Page Title -->
+  <header class="blog-header">
+    <h1>Our Blog</h1>
+    <p>Stay updated with the latest news, recipes, and events from BuyBuddy!</p>
+  </header>
+
+  <!-- Blog Features -->
+  <aside class="blog-sidebar">
+    <div class="search-bar">
+      <input type="text" placeholder="Search blog posts..." aria-label="Search Blog">
+      <button type="button">Search</button>
+    </div>
+
+    <div class="categories">
+      <h3>Categories</h3>
+      <ul>
+        <li><a href="#">Recipes</a></li>
+        <li><a href="#">Food Truck Events</a></li>
+        <li><a href="#">Customer Stories</a></li>
+        <li><a href="#">Behind the Scenes</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- Blog Posts Section -->
+  <main class="blog-posts">
+    <article class="blog-post">
+      <h2><a href="#">5 Must-Try Dishes from BuyBuddy</a></h2>
+      <p class="post-meta">Published on January 15, 2025 | by Admin</p>
+      <p>
+        Explore our top dishes that are a hit among food lovers! From mouth-watering 
+        burgers to refreshing beverages, there's something for everyone.
+      </p>
+      <a href="#" class="read-more">Read More</a>
+    </article>
+
+    <article class="blog-post">
+      <h2><a href="#">How BuyBuddy Sources Fresh Ingredients</a></h2>
+      <p class="post-meta">Published on January 5, 2025 | by Admin</p>
+      <p>
+        Quality ingredients are the secret to great food. Learn how we ensure freshness 
+        in every bite!
+      </p>
+      <a href="#" class="read-more">Read More</a>
+    </article>
+    
+    <!-- Add more blog posts as needed -->
+  </main>
+</section>
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'orderonline.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="order-online-page">
+  <!-- Order Online Header -->
+  <header class="order-online-header">
+    <h1>Order Online</h1>
+    <p>Select your favorite meal, customize your order, and have it delivered to your doorstep or ready for pickup!</p>
+  </header>
+
+  <section class="search-filter">
+    <input type="text" id="search-bar" placeholder="Search for a meal..." onkeyup="filterMenu()">
+  
+    <select id="category-filter" onchange="filterMenu()">
+      <option value="all">All Categories</option>
+      <option value="burger">Burgers</option>
+      <option value="taco">Tacos</option>
+      <option value="fries">Fries</option>
+      <option value="drinks">Drinks</option>
+      <option value="vegetarian">Vegetarian</option>
+    </select>
+  </section>
+
+  <section class="menu-grid">
+    {% if menu %}
+      {% for item in menu %}
+      <div class="menu-item">
+        <img src="#" alt="{{ item.dish_name }}">
+        <label>{{ item.dish_name }}</label>
+        <p>₹{{ item.price }}</p>
+        <a id="more-details" href="/item/{{ item.item_id }}">More Details</a>
+        <button>Add</button>
+      </div>
+      {% endfor %}
+    {% else %}
+      <p>Sorry, we don't have any menu today!</p>
+    {% endif %}
+  </section>
+
+     
+    </form>
+  </section>
+</section>
+{% endblock %}

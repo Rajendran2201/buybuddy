@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block scripts %}
+    <script src="{% static 'js/preorder.js' %}"></script>
+{% endblock %}
+
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'preorder.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="preorder-page">
+  <!-- Preorder Header -->
+  <header class="preorder-header">
+    <p>Order ahead and have your favorite meal ready for pickup at your convenience. Simply choose your meal, pick your time, and we’ll have it hot and fresh when you arrive!</p>
+  </header>
+
+  <!-- Pre-order Form -->
+  <section class="preorder-form">
+    <h2>Choose Your Meal</h2>
+    <form action="#" method="post">
+
+      <section class="search-filter">
+        <input type="text" id="search-bar" placeholder="Search for a meal..." onkeyup="filterMenu()">
+      
+        <select id="category-filter" onchange="filterMenu()">
+          <option value="all">All Categories</option>
+          <option value="burger">Burgers</option>
+          <option value="taco">Tacos</option>
+          <option value="fries">Fries</option>
+          <option value="drinks">Drinks</option>
+          <option value="vegetarian">Vegetarian</option>
+        </select>
+      </section>
+
+      <section class="menu-grid">
+        {% if menu %}
+          {% for item in menu %}
+          <div class="menu-item">
+            <img src="#" alt="{{ item.dish_name }}">
+            <label>{{ item.dish_name }}</label>
+            <p>₹{{ item.price }}</p>
+            <a id="more-details" href="/item/{{ item.item_id }}">More Details</a>
+            <button>Add</button>
+          </div>
+          {% endfor %}
+        {% else %}
+          <p>Sorry, we don't have any menu today!</p>
+        {% endif %}
+      </section>
+
+
+      
+    </form>
+  </section>
+</section>
+{% endblock %}

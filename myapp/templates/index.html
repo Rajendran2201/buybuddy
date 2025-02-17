@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'index.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <div class="background-image">
+    <img src="{% static '/assets/home-bg.jpg' %}" alt="Food Truck Event">
+  </div>
+  <div class="greeting-message">
+  <div class="greeting">
+    BuyBuddy is thrilled to announce our new opening in our beloved hometown of Coimbatore. 
+  </div>
+</div>
+
+  <a href="{% url 'orders' %}" class="cta-button">Explore Our Menu</a>
+</section>
+
+<section class="usp" style="background-color: #f9f9f9;">
+   <div class="usp-title">Why Choose Us?</div>
+    <div class = "highlights">
+      <div class="highlight">Fresh Ingredients 
+        <img src="{% static '/assets/ingredients.jpg' %}" alt="Fresh Ingredients"></div>
+      <div class="highlight">Friendly Service
+        <img src="{% static '/assets/service.jpg' %}" alt="Friendly Service"></div>
+      <div class="highlight">Convenient Locations
+        <img src="{% static '/assets/locations.jpg' %}" alt="Convenient Locations"></div>
+      </div>
+    </div>
+</section>  
+
+
+
+
+{% endblock %}

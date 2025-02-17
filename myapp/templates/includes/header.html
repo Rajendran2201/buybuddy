@@ -1,0 +1,57 @@
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'header.css' %}">
+{% endblock %}
+
+ <div class="navigation">
+      <div class="title">
+        {% comment %} <img src="{% static '/assets/BuyBuddy.png' %}" alt="BuyBuddy" class="logo" ></div> {% endcomment %}
+        <h1>BuyBuddy</h1>
+      </div>
+      <div class="pages">
+        <nav>
+          <a href="{% url 'index' %}">Home</a>
+          <div class="dropdown">
+            <a href="#" class="dropdown-toggle">Food Truck</a>
+            <div class="dropdown-menu">
+              <a href="{% url 'location' %}">Location & Schedule</a>
+              <a href="{% url 'events' %}">Events & Catering</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <a href="#" class="dropdown-toggle">Gallery</a>
+            <div class="dropdown-menu">
+              <a href="{% url 'moments' %}">Moments</a>
+              <a href="{% url 'blog' %}">Blog</a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <a href="#" class="dropdown-toggle">About Us</a>
+            <div class="dropdown-menu">
+              <a href="{% url 'about' %}">Know us</a>
+              <a href="{% url 'careers' %}">Careers</a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <a href="#" class="dropdown-toggle">Contact Us</a>
+            <div class="dropdown-menu">
+              <a href="{% url 'contactus' %}">Contact</a>
+              <a href="{% url 'donate' %}">Donate</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <div class="container-fluid">
+              <a href="#shopping-cart" >  <i style="margin-right: 1%;" class="fa-solid fa-cart-shopping justify-content-end fa-xl" ></i></a>
+            </div>
+          </div>
+        
+      </nav>  
+      </div>
+      
+    </div>
+    
+    
+

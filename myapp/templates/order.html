@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'order.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="order-page">
+
+  <!-- Order Methods -->
+  <section class="order-methods">
+    <h2>Choose Your Ordering Method</h2>
+    <p>Choose your preferred method to place an order with BuyBuddy and enjoy delicious meals on the go!</p>
+    <div class = "order-options">
+      <div class="order-link"> 
+        <a href="{% url 'preorder' %}">Pre-order</a>
+      </div>
+      <div class="order-link"> 
+        <a href="{% url 'orderonline' %}">Order Online</a>
+      </div>
+      <div class="order-link"> 
+        <a href="{% url 'storefront' %}">Storefront Pickup</a>
+      </div>
+    </div>
+  </section>
+</section>
+{% endblock %}

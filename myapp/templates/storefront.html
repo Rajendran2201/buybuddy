@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'storefront.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="storefront-page">
+  <!-- Menu Header -->
+  <header class="storefront-header">
+    <h1>Our Menu</h1>
+    <p>Explore our delicious menu! Choose from a variety of options for pickup or delivery.</p>
+  </header>
+  <section class="search-filter">
+    <input type="text" id="search-bar" placeholder="Search for a meal..." onkeyup="filterMenu()">
+  
+    <select id="category-filter" onchange="filterMenu()">
+      <option value="all">All Categories</option>
+      <option value="burger">Burgers</option>
+      <option value="taco">Tacos</option>
+      <option value="fries">Fries</option>
+      <option value="drinks">Drinks</option>
+      <option value="vegetarian">Vegetarian</option>
+    </select>
+  </section>
+
+  <section class="menu-grid">
+    {% if menu %}
+      {% for item in menu %}
+      <div class="menu-item">
+        <img src="#" alt="{{ item.dish_name }}">
+        <label>{{ item.dish_name }}</label>
+        <p>₹{{ item.price }}</p>
+        <a id="more-details" href="/item/{{ item.item_id }}">More Details</a>
+        <button>Add</button>
+      </div>
+      {% endfor %}
+    {% else %}
+      <p>Sorry, we don't have any menu today!</p>
+    {% endif %}
+  </section>
+
+
+</section>
+{% endblock %}

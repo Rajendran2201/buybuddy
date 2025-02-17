@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'careers.css' %}">
+{% endblock %}
+{% block content %}
+<section class="careers-page">
+  <!-- Hero Section -->
+  <header class="careers-header">
+    <h1>Join Our Team</h1>
+    <p>Be a part of the BuyBuddy family and help us bring delicious meals to food lovers everywhere!</p>
+  </header>
+
+
+  <!-- Job Openings Section -->
+  <section class="job-openings">
+    <h2>Current Job Openings</h2>
+    <article class="job">
+      <h3>Food Truck Manager</h3>
+      <p>
+        Lead and manage the daily operations of our food truck, ensuring top-notch service 
+        and quality food delivery.
+      </p>
+      <p><strong>Location:</strong> New York City</p>
+      <p><strong>Experience:</strong> 2+ years in food service management</p>
+      <a href="#" class="apply-button">Apply Now</a>
+    </article>
+
+    <article class="job">
+      <h3>Cook</h3>
+      <p>
+        Prepare delicious meals using fresh ingredients and maintain our high quality 
+        standards.
+      </p>
+      <p><strong>Location:</strong> Los Angeles</p>
+      <p><strong>Experience:</strong> 1+ year in a kitchen or food truck environment</p>
+      <a href="#" class="apply-button">Apply Now</a>
+    </article>
+
+    <article class="job">
+      <h3>Customer Service Associate</h3>
+      <p>
+        Provide excellent customer service and help our guests have the best BuyBuddy experience.
+      </p>
+      <p><strong>Location:</strong> Chicago</p>
+      <p><strong>Experience:</strong> Entry-level, no prior experience required</p>
+      <a href="#" class="apply-button">Apply Now</a>
+    </article>
+  </section>
+
+  <!-- Call to Action -->
+  <aside class="apply-section">
+    <h2>Don’t See a Job That Matches?</h2>
+    <p>
+      We’re always looking for talented individuals! Drop your resume at 
+      <a href="mailto:careers@buybuddy.com">careers@buybuddy.com</a>.
+    </p>
+  </aside>
+</section>
+{% endblock %}
