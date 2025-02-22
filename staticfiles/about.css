@@ -1,0 +1,107 @@
+/* General Styles */
+body {
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+/* About Section */
+.about-section {
+  max-width: 900px;
+  margin-top: 0px;
+  margin: 5px;
+  padding: 20px;
+  background: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+/* Hero Section */
+.about-hero {
+  text-align: center;
+  background-color: #ff5722;
+  color: white;
+  padding: 40px;
+  border-radius: 4px;
+  width: 800px;
+  margin: 0px 10px;
+  height: 40px;
+}
+
+.about-hero h1 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.about-hero p {
+  font-size: 20px;
+  margin: 0;
+}
+
+/* About Content */
+.about-content {
+  padding: 0px;
+  text-align: center;
+}
+
+.about-content h2 {
+  color: #ff5722;
+  margin-top: 20px;
+}
+
+.about-content p {
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+/* Values List */
+.values-list {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  margin-top: 20px;
+  align-items: center;
+  margin-left: 230px;
+
+}
+
+.values-list li {
+  background: #fff3e0;
+  padding: 12px;
+  border-left: 5px solid #ff5722;
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  width: 430px;
+  
+}
+
+/* Careers CTA */
+.careers-cta {
+  background: #ff5722;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+  margin-top: 20px;
+}
+
+.careers-cta h3 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.careers-cta p {
+  font-size: 1.1em;
+}
+
+.careers-cta a {
+  color: white;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.careers-cta a:hover {
+  text-decoration: none;
+}

@@ -1,0 +1,136 @@
+/* General Styling */
+.careers-page {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Hero Section */
+.careers-header {
+  text-align: center;
+  padding: 30px;
+  background-color: #FF5722;
+  color: white;
+  border-radius: 10px;
+}
+
+.careers-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.careers-header p {
+  font-size: 1.2rem;
+}
+
+/* Why Work With Us */
+.why-join {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.why-join h2 {
+  color: #FF5722;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  font-size: 1.2rem;
+}
+
+.benefits-list li {
+  background: #FFF3E0;
+  margin: 10px auto;
+  padding: 10px 15px;
+  border-radius: 5px;
+  max-width: 400px;
+}
+
+/* Job Openings Section */
+.job-openings {
+  margin: 40px 0;
+}
+
+.job-openings h2 {
+  text-align: center;
+  color: #FF5722;
+  font-size: 2rem;
+}
+
+.job {
+  background: white;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.job:hover {
+  transform: translateY(-5px);
+}
+
+.job h3 {
+  font-size: 1.5rem;
+  color: #FF5722;
+}
+
+.job p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.apply-button {
+  display: inline-block;
+  background-color: #FF5722;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.apply-button:hover {
+  background-color: #E64A19;
+}
+
+/* Call to Action Section */
+.apply-section {
+  text-align: center;
+  background: #FFF3E0;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.apply-section h2 {
+  font-size: 1.8rem;
+  color: #FF5722;
+}
+
+.apply-section a {
+  color: #FF5722;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.apply-section a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .careers-page {
+      padding: 10px;
+  }
+
+  .benefits-list li {
+      max-width: 100%;
+  }
+}

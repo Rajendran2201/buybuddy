@@ -1,0 +1,63 @@
+/* General Styles for the Order Page */
+.order-page {
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.order-methods {
+  text-align: center;
+}
+
+.order-methods h2 {
+  font-size: 2rem;
+  color:#ff5722;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.order-methods p {
+  color:black;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Order Options List */
+.order-options {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin: 50px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.order-options li {
+  background-color: whitesmoke;
+  padding: 10px 30px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100px; 
+}
+
+.order-options li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.order-link{
+  background-color: whitesmoke;
+  padding: 20px 20px;
+  border-radius: 6px ;
+}
+.order-link a{
+  color:black;
+  text-decoration: none;
+}
+
+.order-link:hover{
+  background-color: #ff5722;
+  color: whitesmoke;
+}
+.order-link:hover a{
+  color: whitesmoke;
+}

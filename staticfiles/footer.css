@@ -1,0 +1,64 @@
+/* Footer Container */
+
+/* Apply to the entire body to make it a flex container */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Main container, which will fill the available space */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the body takes up the full height */
+}
+
+/* Content area that takes up all available space */
+main {
+  flex: 1; /* This makes the main content area grow to take up the available space */
+}
+
+.footer {
+  background-color: #333; /* Dark background for the footer */
+  color: white; /* Text color */
+  padding: 30px 0; /* Padding for top and bottom */
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.social-links a {
+  color: whitesmoke;
+  font-size: 1rem; /* Icon size */
+  margin: 10px 12px; /* Space between icons */
+  display: inline-block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hover effect for social media icons */
+.social-links a:hover {
+  transform: scale(1.2); /* Slight zoom effect */
+  opacity: 0.8; /* Fade effect */
+}
+
+/* License Styling */
+.license p {
+  font-size: 0.6rem;
+  margin: 0;
+}
+
+.license span#year {
+  font-weight: bold; /* Highlight the year */
+}
+
+.footer {
+
+  display: flex;
+  flex-direction: column; /* Stack the social links and license vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically if needed */
+  background-color: #333; /* Dark background for the footer */
+  color: white; /* White text */
+  padding: 20px 0; /* Padding for top and bottom */
+  font-family:'Times New Roman', Times, serif;
+  text-align: center; /* Center text */
+}
