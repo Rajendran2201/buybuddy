@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: buybuddy
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn BuyBuddy.wsgi
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: BuyBuddy.settings
+      - key: PYTHON_VERSION
+        value: 3.11
+      - key: SECRET_KEY
+        value: django-insecure-37mn=8&^u$88vx4&xvy8xy2sn2z##w^9#cl&j#6imkf%i5&g56
+      - key: DEBUG
+        value: False
