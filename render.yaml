@@ -3,10 +3,10 @@ services:
     name: buybuddy
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn BuyBuddy.wsgi
+    startCommand: gunicorn buybuddy.wsgi:application
     envVars:
       - key: DJANGO_SETTINGS_MODULE
-        value: BuyBuddy.settings
+        value: buybuddy.settings
       - key: PYTHON_VERSION
         value: 3.11
       - key: SECRET_KEY

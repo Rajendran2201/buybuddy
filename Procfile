@@ -1,2 +1,1 @@
-web: gunicorn BuyBuddy.wsgi
-
+web: gunicorn buybuddy.wsgi
