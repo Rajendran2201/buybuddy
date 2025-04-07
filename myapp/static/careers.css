@@ -1,17 +1,18 @@
 /* General Styling */
 .careers-page {
   font-family: 'Arial', sans-serif;
-  color: #333;
+  color: #2A003F;
   max-width: 1100px;
   margin: auto;
   padding: 20px;
+  background-color: #ffffff;
 }
 
 /* Hero Section */
 .careers-header {
   text-align: center;
   padding: 30px;
-  background-color: #FF5722;
+  background-color: #7B2CBF;
   color: white;
   border-radius: 10px;
 }
@@ -32,7 +33,7 @@
 }
 
 .why-join h2 {
-  color: #FF5722;
+  color: #7B2CBF;
   font-size: 2rem;
   margin-bottom: 10px;
 }
@@ -44,7 +45,7 @@
 }
 
 .benefits-list li {
-  background: #FFF3E0;
+  background: #F3E8FF;
   margin: 10px auto;
   padding: 10px 15px;
   border-radius: 5px;
@@ -58,7 +59,7 @@
 
 .job-openings h2 {
   text-align: center;
-  color: #FF5722;
+  color: #7B2CBF;
   font-size: 2rem;
 }
 
@@ -67,7 +68,7 @@
   padding: 20px;
   margin: 20px 0;
   border-radius: 10px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 12px rgba(123, 44, 191, 0.1);
   transition: transform 0.3s ease;
 }
 
@@ -77,17 +78,17 @@
 
 .job h3 {
   font-size: 1.5rem;
-  color: #FF5722;
+  color: #7B2CBF;
 }
 
 .job p {
   font-size: 1rem;
-  color: #555;
+  color: #444;
 }
 
 .apply-button {
   display: inline-block;
-  background-color: #FF5722;
+  background-color: #7B2CBF;
   color: white;
   padding: 10px 15px;
   border-radius: 5px;
@@ -97,13 +98,13 @@
 }
 
 .apply-button:hover {
-  background-color: #E64A19;
+  background-color: #5A189A;
 }
 
 /* Call to Action Section */
 .apply-section {
   text-align: center;
-  background: #FFF3E0;
+  background: #F3E8FF;
   padding: 20px;
   border-radius: 10px;
   margin-top: 30px;
@@ -111,11 +112,11 @@
 
 .apply-section h2 {
   font-size: 1.8rem;
-  color: #FF5722;
+  color: #7B2CBF;
 }
 
 .apply-section a {
-  color: #FF5722;
+  color: #7B2CBF;
   font-weight: bold;
   text-decoration: none;
 }

@@ -1,75 +1,79 @@
 /* General Blog Page Styling */
 .blog-page {
-  font-family: 'Arial', sans-serif;
-  color: #333;
-  max-width: 1100px;
+  font-family: 'Poppins', sans-serif;
+  color: #2c2c2c;
+  max-width: 1200px;
   margin: auto;
-  padding: 20px;
+  padding: 2rem;
   display: grid;
-  grid-template-columns: 1fr 3fr;
-  gap: 20px;
+  grid-template-columns: 1fr 2.5fr;
+  gap: 2rem;
 }
 
 /* Blog Header */
 .blog-header {
   grid-column: span 2;
   text-align: center;
-  padding: 20px;
-  background-color: #ff5722;
+  padding: 2rem;
+  background: linear-gradient(135deg, #a855f7, #7e22ce);
   color: white;
-  border-radius: 10px;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 20px rgba(168, 85, 247, 0.3);
 }
 
 .blog-header h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
 }
 
 .blog-header p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 /* Sidebar */
 .blog-sidebar {
-  background: #fff3e0;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  background: #f6f3fe;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.1);
 }
 
 /* Search Bar */
 .search-bar {
   display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .search-bar input {
   flex: 1;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  padding: 0.75rem;
+  border: 1px solid #d1c4e9;
+  border-radius: 0.75rem;
   font-size: 1rem;
 }
 
 .search-bar button {
-  background-color: #ff5722;
+  background-color: #8b5cf6;
   color: white;
-  padding: 10px;
+  padding: 0.75rem 1rem;
   border: none;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 0.75rem;
+  font-weight: 600;
   transition: background 0.3s ease;
 }
 
 .search-bar button:hover {
-  background-color: #e68900;
+  background-color: #6d28d9;
 }
 
 /* Blog Categories */
 .categories h3 {
-  color: #ff5722;
-  font-size: 1.2rem;
-  margin-bottom: 10px;
+  color: #7e22ce;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
 }
 
 .categories ul {
@@ -78,90 +82,97 @@
 }
 
 .categories li {
-  margin: 8px 0;
+  margin-bottom: 0.75rem;
 }
 
 .categories a {
   text-decoration: none;
-  color: #333;
-  font-weight: bold;
+  color: #4b0082;
+  font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .categories a:hover {
-  color: #ff9800;
+  color: #9333ea;
 }
 
 /* Blog Posts Section */
 .blog-posts {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 2rem;
 }
 
 /* Individual Blog Post */
 .blog-post {
   background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 16px rgba(128, 90, 213, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .blog-post:hover {
   transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(128, 90, 213, 0.15);
 }
 
 .blog-post h2 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  color: #6b21a8;
 }
 
-.blog-post a {
+.blog-post h2 a {
   text-decoration: none;
-  color: #ff5722;
-  transition: color 0.3s ease;
+  color: inherit;
+  transition: color 0.3s;
 }
 
-.blog-post a:hover {
-  color: #e68900;
+.blog-post h2 a:hover {
+  color: #9333ea;
 }
 
 .post-meta {
   font-size: 0.9rem;
-  color: #777;
-  margin-bottom: 10px;
+  color: #7e7e7e;
+  margin-bottom: 0.75rem;
 }
 
 .blog-post p {
   font-size: 1rem;
   color: #444;
+  margin-bottom: 1rem;
 }
 
 .read-more {
-  margin-top: 10px;
-  background-color: #ff9800;
-  padding: 8px 15px;
-  border-radius: 5px;
-  text-decoration: none;
-}
-
-.read-more a{
+  display: inline-block;
+  background-color: #9333ea;
   color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.75rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s ease;
 }
 
 .read-more:hover {
-  background-color: #e68900;
+  background-color: #6b21a8;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .blog-page {
-      display: flex;
-      flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
   }
 
   .blog-sidebar {
-      order: 2;
+    order: 2;
+  }
+
+  .blog-header h1 {
+    font-size: 2rem;
   }
 }

@@ -1,20 +1,22 @@
 /* General Page Styling */
 .donate-page {
   font-family: 'Arial', sans-serif;
-  color: #333;
+  color: #2A003F;
   max-width: 900px;
   margin: auto;
   padding: 20px;
+  background-color: #ffffff;
 }
 
 /* Hero Section */
 .donate-header {
   text-align: center;
   padding: 20px;
-  background-color: #ff5722;
+  background-color: #7B2CBF;
   color: white;
   border-radius: 10px;
   font-size: 1.2rem;
+  box-shadow: 0 4px 8px rgba(123, 44, 191, 0.2);
 }
 
 /* Donation Form */
@@ -22,12 +24,17 @@
   margin-top: 30px;
   padding: 25px;
   background: #ffffff;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 12px rgba(123, 44, 191, 0.15);
   border-radius: 10px;
+  transition: box-shadow 0.3s ease;
+}
+
+.donation-form:hover {
+  box-shadow: 0px 6px 20px rgba(90, 24, 154, 0.2);
 }
 
 .donation-form h2 {
-  color: #ff5722;
+  color: #7B2CBF;
   text-align: center;
   margin-bottom: 15px;
 }
@@ -46,11 +53,13 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 1rem;
-  transition: border 0.3s ease;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
 }
 
-.donation-form input:focus {
-  border: 1px solid #ff5722;
+.donation-form input:focus,
+.donation-form textarea:focus {
+  border: 1px solid #7B2CBF;
+  box-shadow: 0 0 5px rgba(123, 44, 191, 0.3);
 }
 
 /* Donation Options */
@@ -68,7 +77,7 @@
 .donation-options label {
   display: flex;
   align-items: center;
-  background: #f8f8f8;
+  background: #F3E8FF;
   padding: 8px 15px;
   border-radius: 5px;
   cursor: pointer;
@@ -76,7 +85,7 @@
 }
 
 .donation-options label:hover {
-  background: #ffccbc;
+  background: #E0BBFF;
 }
 
 /* Checkbox Group */
@@ -104,7 +113,7 @@ input[type="date"] {
 }
 
 .form-buttons button {
-  background-color: #ff5722;
+  background-color: #7B2CBF;
   color: white;
   padding: 12px;
   font-size: 1.2rem;
@@ -112,17 +121,19 @@ input[type="date"] {
   cursor: pointer;
   width: 48%;
   border-radius: 5px;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(123, 44, 191, 0.2);
 }
 
 .form-buttons button:hover {
-  background-color: #e64a19;
+  background-color: #5A189A;
+  transform: translateY(-2px);
 }
 
 /* Marquee Section */
 .donors-marquee {
   margin-top: 30px;
-  background: #fff3e0;
+  background: #F3E8FF;
   padding: 15px;
   border-radius: 10px;
   text-align: center;
@@ -131,7 +142,7 @@ input[type="date"] {
 
 .donors-marquee marquee {
   font-weight: bold;
-  color: #ff5722;
+  color: #7B2CBF;
 }
 
 /* Donation Impact Table */
@@ -140,11 +151,11 @@ input[type="date"] {
   background: white;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 12px rgba(90, 24, 154, 0.1);
 }
 
 .donation-impact-table h2 {
-  color: #ff5722;
+  color: #7B2CBF;
   text-align: center;
   margin-bottom: 15px;
 }
@@ -162,12 +173,12 @@ th, td {
 }
 
 th {
-  background-color: #ff5722;
+  background-color: #7B2CBF;
   color: white;
 }
 
 td {
-  background-color: #fff8e1;
+  background-color: #F8F0FF;
 }
 
 /* Responsive Design */

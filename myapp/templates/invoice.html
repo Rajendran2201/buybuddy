@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body { font-family: Arial, sans-serif; color: #333; }
+    h1 { text-align: center; color: #7b2cbf; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+    th { background-color: #f0eaff; }
+    .total { text-align: right; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>BuyBuddy Invoice</h1>
+  <p><strong>Order Date:</strong> {{ order_date }}</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Quantity</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in cart_items %}
+      <tr>
+        <td>{{ item.dish_name }}</td>
+        <td>{{ item.quantity }}</td>
+        <td>₹{{ item.total }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <p class="total">Total Paid: ₹{{ total_price }}</p>
+</body>
+</html>

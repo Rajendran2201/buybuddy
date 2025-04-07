@@ -13,15 +13,28 @@ body{
   z-index: 1000; /* Ensures it stays on top of other elements */
 }
 
-.title{
-  margin-left: 20px;
+.brand-header {
+  padding: 10px 20px;
+}
+
+.logo {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+
+.brand-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
 .pages{
-  margin-left: 0px;
+  margin-left: 500px;
   padding: 8px;
-  margin-top: 23px;
+  margin-top: 30px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 

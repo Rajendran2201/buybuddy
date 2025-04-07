@@ -1,5 +1,8 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block extra_css %}
+<link rel="stylesheet" type="text/css" href="{% static 'moments.css' %}">
+{% endblock %}
 {% block content %}
 <section class="moments-page">
   <!-- Moments Header -->

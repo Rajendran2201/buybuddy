@@ -1,0 +1,118 @@
+.cart-page {
+  padding: 3rem 2rem;
+  background-color: #faf9ff;
+  min-height: 80vh;
+  color: #2d2d2d;
+}
+
+.quantity-form button,
+.remove-btn {
+  background-color: #7b2cbf;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.7rem;
+  margin: 0 0.3rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.quantity-form button:hover,
+.remove-btn:hover {
+  background-color: #5a189a;
+}
+
+
+.cart-page h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  color: #5b2d90;
+  text-align: center;
+  font-weight: 700;
+}
+
+.cart-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(90, 68, 130, 0.1);
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.cart-item:hover {
+  transform: scale(1.01);
+}
+
+.cart-item img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  margin-right: 1.5rem;
+  border: 3px solid #eee;
+}
+
+.cart-item div {
+  flex: 1;
+}
+
+.cart-item h3 {
+  font-size: 1.3rem;
+  color: #4e2a84;
+  margin-bottom: 0.4rem;
+}
+
+.cart-item p {
+  margin: 0.3rem 0;
+  color: #555;
+  font-weight: 500;
+}
+
+.cart-page h3 {
+  text-align: right;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  color: #4e2a84;
+  padding-right: 2rem;
+}
+
+.cart-page p {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #999;
+}
+
+/* Checkout button styling */
+.checkout-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto 4rem;
+  padding: 0.75rem 2rem;
+  max-width: 420px;
+  background: linear-gradient(135deg, #7b2cbf, #9d4edd);
+  color: #fff;
+  border-radius: 2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(123, 44, 191, 0.3);
+  text-align: center;
+}
+
+.checkout-btn:hover {
+  background: linear-gradient(135deg, #5a189a, #7b2cbf);
+  box-shadow: 0 6px 15px rgba(90, 24, 154, 0.3);
+}

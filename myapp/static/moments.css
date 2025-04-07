@@ -1,0 +1,123 @@
+.moments-page {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+/* Header Section */
+.moments-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.moments-header h1 {
+  font-size: 2.5rem;
+  color: #6a1b9a; /* purple shade */
+}
+
+.moments-header p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+/* Gallery Section */
+.moments-gallery {
+  margin-bottom: 4rem;
+}
+
+.moments-gallery h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #4a148c;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.gallery-item {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.gallery-item p {
+  padding: 1rem;
+  margin: 0;
+  font-weight: 500;
+  color: #6a1b9a;
+}
+
+/* Submission Section */
+.user-submissions {
+  background-color: #f3e5f5;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(106, 27, 154, 0.1);
+}
+
+.user-submissions h2 {
+  font-size: 1.8rem;
+  color: #4a148c;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.user-submissions p {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+/* Form Styling */
+.user-submissions form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.user-submissions input,
+.user-submissions textarea {
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.user-submissions button {
+  padding: 0.9rem;
+  border: none;
+  background-color: #6a1b9a;
+  color: white;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.user-submissions button:hover {
+  background-color: #4a148c;
+}

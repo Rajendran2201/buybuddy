@@ -15,6 +15,7 @@ urlpatterns = [
     path('food-truck/location/', views.location, name='location'),
     path('food-truck/orders/', views.orders, name='orders'),
     path('food-truck/events/', views.events, name='events'),
+    path('food-truck/events/register', views.registerevent, name='registerevent'),
 
     # Secondary views: Gallery
     path('gallery/moments/', views.moments, name='moments'),
@@ -24,6 +25,11 @@ urlpatterns = [
     path('about/us/', views.aboutus, name='aboutus'),
     path('about/careers/', views.careers, name='careers'),
 
+    path('download-invoice/', views.download_invoice, name='download_invoice'),
+    path('cart/update/', views.update_cart_quantity, name='update_cart_quantity'),
+    path('cart/remove/', views.remove_from_cart, name='remove_from_cart'),
+
+
     # Secondary views: Contact
     path('contact-us/donate/', views.donate, name='donate'),
 
@@ -31,5 +37,9 @@ urlpatterns = [
     path('food-truck/orders/preorder/', views.preorder, name='preorder'),
     path('food-truck/orders/orderonline/', views.orderonline, name='orderonline'),
     path('food-truck/orders/storefront/', views.storefront, name='storefront'),
+
+     path('add-to-cart/<int:item_id>/', views.add_to_cart, name='add_to_cart'),
+    path('cart/', views.cart, name='cart'),
+    path('checkout/', views.checkout, name='checkout'),
 
 ]

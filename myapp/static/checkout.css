@@ -1,0 +1,133 @@
+/* Checkout Page Container */
+.checkout-page {
+  padding: 3rem 2rem;
+  background-color: #faf9ff;
+  min-height: 85vh;
+  color: #2d2d2d;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Headings */
+.checkout-page h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #5b2d90;
+  text-align: center;
+  font-weight: 700;
+}
+
+.checkout-page p {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #777;
+  margin-bottom: 2.5rem;
+}
+
+.checkout-page h3 {
+  font-size: 1.6rem;
+  margin-top: 2.5rem;
+  color: #4e2a84;
+  text-align: center;
+}
+
+/* Cart/Checkout List */
+.cart-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+/* Cart Item Styling */
+.cart-item {
+  display: flex;
+  align-items: flex-start;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(91, 45, 144, 0.1);
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  gap: 1.2rem;
+  transition: transform 0.2s ease;
+}
+
+.cart-item:hover {
+  transform: scale(1.01);
+}
+
+/* Image Styling */
+.cart-item img {
+  width: 85px;
+  height: 85px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  border: 2px solid #eee;
+}
+
+/* Text Container */
+.cart-item div {
+  flex: 1;
+}
+
+/* Dish Name */
+.cart-item h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+  color: #4e2a84;
+  font-weight: 600;
+}
+
+/* Quantity and Total */
+.cart-item p {
+  margin: 0.2rem 0;
+  color: #555;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .cart-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cart-item img {
+    margin-bottom: 1rem;
+  }
+
+  .checkout-page h3 {
+    font-size: 1.3rem;
+  }
+}
+.print-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.print-btn {
+  padding: 0.75rem 2rem;
+  background: linear-gradient(135deg, #7b2cbf, #9d4edd);
+  color: white;
+  border: none;
+  border-radius: 2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(123, 44, 191, 0.3);
+  transition: background 0.3s ease;
+}
+
+.print-btn:hover {
+  background: linear-gradient(135deg, #5a189a, #7b2cbf);
+}
+
+/* Hide print button when printing */
+@media print {
+  .print-btn, .print-container {
+    display: none;
+  }
+}

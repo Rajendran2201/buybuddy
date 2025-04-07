@@ -1,87 +1,56 @@
-.background-image img{
-  width: 21cm;
-  height: auto;
-  display: block;
-  margin-left: 80px;
-}
-
-.hero{
+/* Hero Section */
+.hero {
   position: relative;
-  text-align: center;
-  color: white;
-}
-
-.greeting{
-  position: absolute; /* Place the text on top of the image */
-  top: 20%; /* Center the text vertically */
-  left: 50%; /* Center the text horizontally */
-  transform: translate(-50%, -50%); /* Adjust to center the text exactly */
-  font-size: 1rem;
-  line-height: 1.6;
-  max-width: 50%; /* Optional: Constrain the text width */
-  background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
-  padding: 10px;
-  border-radius: 2px;
-}
-
-
-.cta-button {
-  position: absolute;
-  bottom: 10%; /* Position the button at the bottom of the image */
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 10px 20px;
-  background-color: #ff5722;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-}
-
-.cta-button:hover {
-  background-color: #e64a19;
-}
-
-/* Highlights section */
-.highlights {
-  padding: 20px;
-  background-color: #f9f9f9;
-  text-align: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(to right, #ede9fe, #f5f3ff);
   display: flex;
-  padding: 30px;
   align-items: center;
+  justify-content: center;
+  padding: 0 2rem; /* Add side padding */
+  box-sizing: border-box;
 }
 
-.usp-title{
-  font-size:xx-large;
-  font-weight: bolder;
-  margin: 0px 175px;
-  text-shadow:  1px 1px 1px rgba(0, 0, 0, 0.5);
+.carousel-caption h1,
+.carousel-caption p {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  backdrop-filter: blur(4px);
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
 
 
-
-.highlight{
-  margin:10px 10px;
-  padding: 30px;
-  border-radius: 6px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-weight: bolder;
+.background-image {
+  width: 100%;
+  height: 100%;
+  max-width: 1200px; /* limit width for centering */
+  margin: 0 auto;
+  position: relative;
 }
 
-.highlight img{
-  margin-top: 5px;
-  margin-left: 10px;
-  margin-right: 10px;
-  height: 150px;
-  width: 200px;
-  border-radius: 4px;
-  border:white
+.background-image img {
+  width: 100%;
+  height: 100%;
+  max-height: 85vh; /* reduced height */
+  object-fit: cover;
+  border-radius: 1.5rem;
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.2);
 }
+@media (max-width: 768px) {
+  .background-image img {
+    max-height: 65vh;
+  }
 
-.highlight:hover{
-  background-color: #ff5722;
-  color: white;
-  text-shadow: #f9f9f9;
+  .greeting-message-container {
+    padding: 1rem;
+  }
+
+  .cta-button {
+    font-size: 0.9rem;
+    padding: 0.75rem 1.5rem;
+  }
 }

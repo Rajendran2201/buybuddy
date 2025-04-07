@@ -12,35 +12,58 @@
     <h1>Our Menu</h1>
     <p>Explore our delicious menu! Choose from a variety of options for pickup or delivery.</p>
   </header>
+
+  <!-- Search and Filter -->
   <section class="search-filter">
-    <input type="text" id="search-bar" placeholder="Search for a meal..." onkeyup="filterMenu()">
-  
-    <select id="category-filter" onchange="filterMenu()">
-      <option value="all">All Categories</option>
-      <option value="burger">Burgers</option>
-      <option value="taco">Tacos</option>
-      <option value="fries">Fries</option>
-      <option value="drinks">Drinks</option>
-      <option value="vegetarian">Vegetarian</option>
+    <input type="text" id="search-bar" placeholder="Search for a meal..." onkeyup="filterMenu()" />
+
+    <select id="storefront-category" onchange="filterMenu()">
+      <option value="all">All</option>
+      <option value="main-course">Main Course</option>
+      <option value="snacks">Snacks</option>
+      <option value="street-food">Street Food</option>
+      <option value="non-veg">Non-Veg</option>
+      <option value="beverages">Beverages</option>
     </select>
   </section>
 
+  <!-- Menu Items Grid -->
   <section class="menu-grid">
     {% if menu %}
       {% for item in menu %}
-      <div class="menu-item">
-        <img src="#" alt="{{ item.dish_name }}">
-        <label>{{ item.dish_name }}</label>
-        <p>₹{{ item.price }}</p>
-        <a id="more-details" href="/item/{{ item.item_id }}">More Details</a>
-        <button>Add</button>
-      </div>
+        <div class="menu-item" data-category="{{ item.category }}">
+          <img src="{% static item.image %}" alt="{{ item.dish_name }} image" class="menu-image" />
+          <div class="menu-info">
+            <label class="menu-name">{{ item.dish_name }}</label>
+            <p class="menu-price">Price: ₹{{ item.price }}</p>
+            <div class="menu-actions">
+              <button class="add-button">Add</button>
+            </div>
+          </div>
+        </div>
       {% endfor %}
     {% else %}
-      <p>Sorry, we don't have any menu today!</p>
+      <p class="no-menu-message">Sorry, we don't have any menu today!</p>
     {% endif %}
   </section>
-
-
 </section>
+
+<!-- JavaScript Filtering -->
+<script>
+function filterMenu() {
+  const searchTerm = document.getElementById('search-bar').value.toLowerCase();
+  const selectedCategory = document.getElementById('storefront-category').value;
+  const menuItems = document.querySelectorAll('.menu-item');
+
+  menuItems.forEach(item => {
+    const itemName = item.querySelector('.menu-name').textContent.toLowerCase();
+    const itemCategory = item.getAttribute('data-category');
+
+    const matchesSearch = itemName.includes(searchTerm);
+    const matchesCategory = selectedCategory === 'all' || itemCategory === selectedCategory;
+
+    item.style.display = (matchesSearch && matchesCategory) ? 'block' : 'none';
+  });
+}
+</script>
 {% endblock %}

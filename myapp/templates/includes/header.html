@@ -5,10 +5,10 @@
 {% endblock %}
 
  <div class="navigation">
-      <div class="title">
-        {% comment %} <img src="{% static '/assets/BuyBuddy.png' %}" alt="BuyBuddy" class="logo" ></div> {% endcomment %}
-        <h1>BuyBuddy</h1>
-      </div>
+  <div class="brand-header d-flex align-items-center">
+    <img src="{% static '/assets/BuyBuddy.png' %}" alt="BuyBuddy Logo" class="logo me-2">
+    <h1 class="brand-title m-0">BuyBuddy</h1>
+  </div>
       <div class="pages">
         <nav>
           <a href="{% url 'index' %}">Home</a>
@@ -44,7 +44,7 @@
           </div>
           <div class="dropdown">
             <div class="container-fluid">
-              <a href="#shopping-cart" >  <i style="margin-right: 1%;" class="fa-solid fa-cart-shopping justify-content-end fa-xl" ></i></a>
+              <a href="{% url 'cart' %}" >  <i style="margin-right: 1%;" class="fa-solid fa-cart-shopping justify-content-end fa-xl" ></i></a>
             </div>
           </div>
         

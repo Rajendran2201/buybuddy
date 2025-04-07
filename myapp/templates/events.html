@@ -36,62 +36,25 @@
           <td>Food Festival 2025</td>
           <td>January 30, 2025</td>
           <td>Central Park, NYC</td>
-          <td><button>Register Now</button></td>
+          <td><a href="{% url 'registerevent' %}" class="btn-register">Register Now</a>
+          </td>
         </tr>
         <tr>
           <td>Spring Feast</td>
           <td>March 15, 2025</td>
           <td>San Francisco, CA</td>
-          <td><button>Register Now</button></td>
+          <td><a href="{% url 'registerevent' %}" class="btn-register">Register Now</a>
+          </td>
         </tr>
         <tr>
           <td>Summer Block Party</td>
           <td>June 10, 2025</td>
           <td>Miami Beach, FL</td>
-          <td><button>Register Now</button></td>
+          <td><a href="{% url 'registerevent' %}" class="btn-register">Register Now</a>
+          </td>
         </tr>
       </tbody>
     </table>
-  </section>
-
-  <!-- Event Registration Form -->
-  <section class="event-registration">
-    <h2>Register for an Event</h2>
-    <form action="#" method="post">
-      <!-- Name and Email -->
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" placeholder="Your Full Name" required>
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" placeholder="Your Email Address" required>
-
-      <!-- Select Event -->
-      <label for="event">Choose an Event:</label>
-      <select id="event" name="event" required>
-        <option value="" disabled selected>Select an Event</option>
-        <option value="food-festival">Food Festival 2025</option>
-        <option value="spring-feast">Spring Feast</option>
-        <option value="summer-block-party">Summer Block Party</option>
-      </select>
-
-      <!-- Checkbox for Updates -->
-      <label for="updates">Additional Options:</label>
-      <div class="checkbox-group">
-        <input type="checkbox" id="subscribe-updates" name="subscribe-updates">
-        <label for="subscribe-updates">Subscribe to event updates</label>
-      </div>
-
-      <!-- Event Progress -->
-      <label for="progress">Event Seats Filled:</label>
-      <progress id="progress" value="50" max="100"></progress>
-      <p>50% of seats filled!</p>
-
-      <!-- Buttons -->
-      <div class="form-buttons">
-        <button type="submit">Register</button>
-        <button type="reset">Reset</button>
-      </div>
-    </form>
   </section>
 
   <!-- Past Events Section -->
