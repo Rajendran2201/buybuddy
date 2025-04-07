@@ -72,7 +72,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'BuyBuddy.wsgi.application'
+WSGI_APPLICATION = 'buybuddy.wsgi.application'
 
 
 # Database
