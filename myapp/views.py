@@ -28,7 +28,7 @@ menu_items = [
          {'item_id': 40, 'dish_name': 'Mexican Shawarma', 'price': '100', 'image': 'assets/mexican-shawarma.jpg', 'category': 'shawarma'},
          {'item_id': 41, 'dish_name': 'Lemon Soda', 'price': '40', 'image': 'assets/lemon-soda.jpg', 'category': 'beverages'},
          {'item_id': 42, 'dish_name': 'Kulfi Stick', 'price': '70', 'image': 'assets/kulfi-stick.jpg', 'category': 'icecream'},
-      {'item_id': 5, 'dish_name': 'Masala Dosa', 'price': '80', 'image': 'assets/masala-dosa.jpg', 'category': 'south-indian'},
+         {'item_id': 5, 'dish_name': 'Masala Dosa', 'price': '80', 'image': 'assets/masala-dosa.jpg', 'category': 'south-indian'},
          {'item_id': 6, 'dish_name': 'Paneer Butter Masala', 'price': '160', 'image': 'assets/paneer-butter-masala.jpg', 'category': 'north-indian'},
          {'item_id': 7, 'dish_name': 'Chicken Tikka', 'price': '200', 'image': 'assets/chicken-tikka.jpg', 'category': 'non-veg-specials'},
          {'item_id': 8, 'dish_name': 'Tandoori Roti', 'price': '30', 'image': 'assets/tandoori-roti.jpg', 'category': 'breads'},
@@ -135,6 +135,8 @@ def preorder(request):
       {'item_id': 40, 'dish_name': 'Mexican Shawarma', 'price': '100', 'image': 'assets/mexican-shawarma.jpg', 'category': 'shawarma'},
       {'item_id': 41, 'dish_name': 'Lemon Soda', 'price': '40', 'image': 'assets/lemon-soda.jpg', 'category': 'beverages'},
       {'item_id': 42, 'dish_name': 'Kulfi Stick', 'price': '70', 'image': 'assets/kulfi-stick.jpg', 'category': 'icecream'},
+      {'item_id': 143,'dish_name': 'Choco Lava Cake','price': '90','image': 'assets/choco-lava-cake.jpg','category': 'dessert'},
+       {'item_id': 144, 'dish_name': 'Brownie', 'price': '80', 'image': 'assets/brownie.jpg', 'category': 'dessert'}
    ]
 
    return render(request, 'preorder.html', {'menu': menu})

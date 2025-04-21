@@ -116,3 +116,16 @@
   background: linear-gradient(135deg, #5a189a, #7b2cbf);
   box-shadow: 0 6px 15px rgba(90, 24, 154, 0.3);
 }
+
+.gpay-section {
+  margin-top: 2rem;
+  text-align: center;
+}
+.gpay-section h3{
+  margin-top: 2rem;
+  text-align: center;
+}
+.gpay-qr {
+  width: 200px;
+  height: auto;
+}

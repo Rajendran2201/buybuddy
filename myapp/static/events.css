@@ -41,7 +41,6 @@
 .events-header {
   text-align: center;
   padding: 30px 20px;
-  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
   color: #fff;
   border-radius: 12px;
   font-size: 1.4rem;

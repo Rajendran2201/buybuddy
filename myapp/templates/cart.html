@@ -39,6 +39,14 @@
   {% else %}
     <p>Your cart is empty!</p>
   {% endif %}
+ 
+
+  <!--Add the gpay qr code for payment-->
+  <div class="gpay-section">
+    <h3>Scan to Pay with GPay</h3>
+    <img src="{% static '/assets/qrcode.jpg' %}" alt="Google Pay QR" class="gpay-qr">
+  </div>
+  
   <a href="{% url 'checkout' %}" class="checkout-btn">Proceed to Checkout</a>
 </section>
 {% endblock %}
